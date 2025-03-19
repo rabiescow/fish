@@ -3,5 +3,5 @@
 #
 function ll --wraps ls --description "List contents of directory using long format"
     # ls -lh $argv
-  exa -halgm@ --git --icons --time-style full-iso $argv
+  exa -halgm@ --git --icons --time-style long-iso $argv
 end

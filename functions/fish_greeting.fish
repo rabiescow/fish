@@ -18,4 +18,6 @@ function fish_greeting
     # Keep it that way to not print superfluous newlines on old configuration
     test -n "$fish_greeting"
     and echo $fish_greeting
+
+  neofetch
 end
