@@ -2,11 +2,11 @@ function __vertical_component_dir
   __vertical_util_set vertical_dir_color        blue --bold
   __vertical_util_set vertical_dir_prefix       ' '
   __vertical_util_set vertical_dir_prefix_color blue --bold
-  __vertical_util_set vertical_dir_trunc_git    true
-  __vertical_util_set vertical_dir_trunc_home   true
+  __vertical_util_set vertical_dir_trunc_git    false
+  __vertical_util_set vertical_dir_trunc_home   false
 
   set -l dir
-  if [ $vertical_dir_trunc_git = true ] && __vertical_util_is_git
+  if [ $vertical_dir_trunc_git = false ] && __vertical_util_is_git
     # Find the current directory with all symlinks resolved
     set dir (pwd -P 2> /dev/null || pwd)
     # Find the path to the root of the git repository. The idea behind the
@@ -17,7 +17,7 @@ function __vertical_component_dir
   else if [ $vertical_dir_trunc_home = true ]
     # Replace $HOME with ~
     set -l realhome ~
-    set dir (string replace -r '^'"$realhome"'($|/)' '~$1' $PWD)
+    set dir (string replace -r '^'"$realhome"'(/|$)' '~$1' $PWD)
   else
     set dir $PWD
   end

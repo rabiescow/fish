@@ -1,10 +1,10 @@
 function __vertical_component_user
-  __vertical_util_set vertical_user_color        yellow --bold
+  __vertical_util_set vertical_user_color        yellow --bold --italic
   __vertical_util_set vertical_user_prefix       ' '
   __vertical_util_set vertical_user_prefix_color yellow --bold
-  __vertical_util_set vertical_user_ssh_only     true
+  __vertical_util_set vertical_user_ssh_only     false
 
-  if not __vertical_util_is_ssh && [ $vertical_user_ssh_only = true ]
+  if not __vertical_util_is_ssh && [ $vertical_user_ssh_only = false ]
     return
   end
 

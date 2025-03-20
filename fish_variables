@@ -75,6 +75,7 @@ SETUVAR vertical_git_status_sym_stashed:\x23
 SETUVAR vertical_git_status_sym_unmerged:\x3d
 SETUVAR vertical_git_status_sym_untracked:\x3f
 SETUVAR vertical_host_color:yellow\x1e\x2d\x2dbold
+SETUVAR vertical_host_name:cassiopeia
 SETUVAR vertical_host_prefix:\x40
 SETUVAR vertical_host_prefix_color:yellow\x1e\x2d\x2dbold
 SETUVAR vertical_host_ssh_only:true

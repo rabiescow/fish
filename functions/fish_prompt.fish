@@ -3,7 +3,7 @@ function fish_prompt
 
   __vertical_util_set vertical_newline true
   __vertical_util_set vertical_order   jobs user host dir git_branch \
-                                       git_status duration vi_mode
+                                       git_status duration vi_mode 
 
   if [ $vertical_newline = true ]
     echo
