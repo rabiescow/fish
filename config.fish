@@ -1,9 +1,9 @@
 # if status is-interactive
 #     # Commands to run in interactive sessions can go here
 # end
-set -xgU HOME /home/anon
-set -xgU fish_greeting ""
-set -xgU BUN_INSTALL $HOME/.bun
+set -xg HOME /home/anon
+set -xg fish_greeting ""
+set -xg BUN_INSTALL $HOME/.bun
 # set -xg PATH $PATH:$BUN_INSTALL/bin
 
 # System set -xgs
@@ -24,21 +24,21 @@ set -xgU BUN_INSTALL $HOME/.bun
 # set -xg LC_IDENTIFICATION en_US.UTF-8
 
 # Programming languages
-set -xgU PROG_LANG $HOME/.lang
-set -xgU ELIXIR_ERL_OPTIONS "+fnu"
+set -xg PROG_LANG $HOME/.lang
+set -xg ELIXIR_ERL_OPTIONS "+fnu"
 
 # Environment set -xgs
 # set -xg PATH $PATH:/usr/local/bin:/usr/bin:/local/bin
 # set -xg HOME /home/anon
-set -xgU TERM st-256color
-set -xgU VISUAL nvim
+set -xg TERM st-256color
+set -xg VISUAL nvim
 
 # XDG set -xgs
-set -xgU XDG_CONFIG_HOME $HOME/.config
-set -xgU XDG_CONFIG_DIRS /etc/xdg
-set -xgU XDG_DATA_HOME $HOME/.local/share
-set -xgU XDG_STATE_HOME ~/.local/state
-set -xgU XDG_CACHE_HOME ~/.cache
+set -xg XDG_CONFIG_HOME $HOME/.config
+set -xg XDG_CONFIG_DIRS /etc/xdg
+set -xg XDG_DATA_HOME $HOME/.local/share
+set -xg XDG_STATE_HOME ~/.local/state
+set -xg XDG_CACHE_HOME ~/.cache
 
 # FZF set -xgs
 # Preview
@@ -47,7 +47,7 @@ set -xgU XDG_CACHE_HOME ~/.cache
 #   --border bold 
 #   --border rounded 
 #   --margin 3%"
-set -xgU FZF_DEFAULT_OPTS '
+set -xg FZF_DEFAULT_OPTS '
   --preview "
   if file --mime-type {} | grep -qF image/; then
     imgcat --depth iterm2 --width $FZF_PREVIEW_COLUMNS --height $FZF_PREVIEW_LINES {}
@@ -58,37 +58,37 @@ set -xgU FZF_DEFAULT_OPTS '
 '
 
 # Preview file content using bat (https://github.com/sharkdp/bat)
-set -xgU FZF_CTRL_T_OPTS "
+set -xg FZF_CTRL_T_OPTS "
   --walker-skip .git,node_modules,target
   --preview 'bat -n --color always {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'" 
 
 # CTRL-Y to copy the command into clipboard using pbcopy
-set -xgU FZF_CTRL_R_OPTS "
+set -xg FZF_CTRL_R_OPTS "
   --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
   --color header:italic
   --header 'Press CTRL-Y to copy command into clipboard'"
 
 # Print tree structure in the preview window
-set -xgU FZF_ALT_C_OPTS "
+set -xg FZF_ALT_C_OPTS "
   --walker-skip .git,node_modules,target
   --preview 'tree -C {}'"
 
 # Fontpreview settings
-set -xgU FONTPREVIEW_SEARCH_PROMPT "❯ "
-set -xgU FONTPREVIEW_SIZE 1800x800
-set -xgU FONTPREVIEW_POSITION "+120+120"
-set -xgU FONTPREVIEW_FONT_SIZE 48
-set -xgU FONTPREVIEW_BG_COLOR "#27445D"
-set -xgU FONTPREVIEW_FG_COLOR "#EFE9D5"
-set -xgU FONTPREVIEW_PREVIEW_TEXT 'No one shall be held in slavery or servitude;\nslavery and the slave trade shall\nbe prohibited in all their forms.\n\nfunc main() {\n fmt.Println("Hello World!")\n}'
+set -xg FONTPREVIEW_SEARCH_PROMPT "❯ "
+set -xg FONTPREVIEW_SIZE 1800x800
+set -xg FONTPREVIEW_POSITION "+120+120"
+set -xg FONTPREVIEW_FONT_SIZE 48
+set -xg FONTPREVIEW_BG_COLOR "#27445D"
+set -xg FONTPREVIEW_FG_COLOR "#EFE9D5"
+set -xg FONTPREVIEW_PREVIEW_TEXT 'No one shall be held in slavery or servitude;\nslavery and the slave trade shall\nbe prohibited in all their forms.\n\nfunc main() {\n fmt.Println("Hello World!")\n}'
 
 # BAT config file
-set -xgU BAT_CONFIG_PATH "~/.config/bat/bat.conf"
-set -xgU BAT_CONFIG_DIR "~/.config/bat/"
+set -xg BAT_CONFIG_PATH "~/.config/bat/bat.conf"
+set -xg BAT_CONFIG_DIR "~/.config/bat/"
 
 # Hyprshot save location
-set -xgU HYPRSHOT_DIR "~/Pictures/screenshots"
+set -xg HYPRSHOT_DIR "~/Pictures/screenshots"
 
 zoxide init fish | source
 
@@ -108,6 +108,6 @@ abbr --add fzf "fzf --preview 'bat -A --color=auto {}'"
 # This section can be safely removed at any time if needed.
 test -r '/home/anon/.opam/opam-init/init.fish' && source '/home/anon/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
 # END opam configuration
+fish_config theme choose enfocado
 
-
-set -xgU GPG_TTY $(tty)
+set -xg GPG_TTY $(tty)

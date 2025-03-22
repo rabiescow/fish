@@ -72,14 +72,15 @@ SETUVAR vertical_git_status_sym_behind:\u2193
 SETUVAR vertical_git_status_sym_deleted:\x2d
 SETUVAR vertical_git_status_sym_diverged:\u2195
 SETUVAR vertical_git_status_sym_modified:\u2022
+SETUVAR vertical_git_status_sym_removed:\U0001f7ad
 SETUVAR vertical_git_status_sym_renamed:\u2023
 SETUVAR vertical_git_status_sym_stashed:\x23
 SETUVAR vertical_git_status_sym_unmerged:\x3d
 SETUVAR vertical_git_status_sym_untracked:\x3f
-SETUVAR vertical_host_color:ff5522
+SETUVAR vertical_host_color:\x23667777
 SETUVAR vertical_host_name:cassiopeia
 SETUVAR vertical_host_prefix:\x40
-SETUVAR vertical_host_prefix_color:ff9922
+SETUVAR vertical_host_prefix_color:\x23bbcccc\x1e\x2d\x2dbold
 SETUVAR vertical_host_ssh_only:false
 SETUVAR vertical_jobs_color:cyan\x1e\x2d\x2dbold
 SETUVAR vertical_jobs_prefix:\x20
@@ -87,7 +88,7 @@ SETUVAR vertical_jobs_prefix_color:cyan\x1e\x2d\x2dbold
 SETUVAR vertical_jobs_sym:\u25cf
 SETUVAR vertical_newline:true
 SETUVAR vertical_order:jobs\x1euser\x1ehost\x1edir\x1egit_branch\x1egit_status\x1eduration\x1evi_mode
-SETUVAR vertical_user_color:ffcc22\x1e\x2d\x2dbold
+SETUVAR vertical_user_color:\x23ccdddd\x1e\x2d\x2dbold
 SETUVAR vertical_user_prefix:\x20
 SETUVAR vertical_user_prefix_color:yellow
 SETUVAR vertical_user_ssh_only:false
