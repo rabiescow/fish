@@ -19,5 +19,5 @@ function fish_greeting
     test -n "$fish_greeting"
     and echo $fish_greeting
 
-  neofetch
+  neorabies
 end

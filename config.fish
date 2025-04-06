@@ -4,32 +4,21 @@
 set -xg HOME /home/anon
 set -xg fish_greeting ""
 set -xg BUN_INSTALL $HOME/.bun
-# set -xg PATH $PATH:$BUN_INSTALL/bin
+set -xg TERM xterm-ghostty
 
-# System set -xgs
-# set -xg LANG en_US.UTF-8
-# set -xg LANGUAGE en_US.UTF-8
-# set -xg LC_CTYPE C
-# set -xg LC_NUMERIC en_US.UTF-8
-# set -xg LC_TIME en_US.UTF-8
-# set -xg LC_COLLATE en_US.UTF-8
-# set -xg LC_MONETARY en_US.UTF-8
-# set -xg LC_MESSAGES en_US.UTF-8
-# set -xg LC_NAME en_US.UTF-8
-# set -xg LC_ADDRESS en_US.UTF-8
-# set -xg LC_ALL C
-# set -xg LC_PAPER en_US.UTF-8
-# set -xg LC_TELEPHONE en_US.UTF-8
-# set -xg LC_MEASUREMENT en_US.UTF-8
-# set -xg LC_IDENTIFICATION en_US.UTF-8
+# Wine
+set -xg WINEPREFIX $HOME/.wine
+set -xg WINEARCH win32
+set -xg WINEDLLOVERRIDES "d3d9,d3d11,d3d10core,dxgi=b"
+set -xg MANGOHUD 0
 
 # Programming languages
 set -xg PROG_LANG $HOME/.lang
 set -xg ELIXIR_ERL_OPTIONS "+fnu"
+set -xg GOPATH $HOME/.local/lib/go
+set -xg GOENV $HOME/.local/lib/go/env
 
 # Environment set -xgs
-# set -xg PATH $PATH:/usr/local/bin:/usr/bin:/local/bin
-# set -xg HOME /home/anon
 set -xg TERM st-256color
 set -xg VISUAL nvim
 
@@ -42,11 +31,6 @@ set -xg XDG_CACHE_HOME ~/.cache
 
 # FZF set -xgs
 # Preview
-# set -xg FZF_DEFAULT_OPTS "--preview 'bat {}'
-#   --layout reverse
-#   --border bold 
-#   --border rounded 
-#   --margin 3%"
 set -xg FZF_DEFAULT_OPTS '
   --preview "
   if file --mime-type {} | grep -qF image/; then
@@ -88,7 +72,7 @@ set -xg BAT_CONFIG_PATH "~/.config/bat/bat.conf"
 set -xg BAT_CONFIG_DIR "~/.config/bat/"
 
 # Hyprshot save location
-set -xg HYPRSHOT_DIR "~/Pictures/screenshots"
+set -xg HYPRSHOT_DIR "$HOME/Pictures/screenshots"
 
 zoxide init fish | source
 
@@ -97,6 +81,9 @@ abbr --add ff1 "fastfetch -c /home/anon/.config/fastfetch/examples/8.jsonc"
 abbr --add gh "history|rg"
 abbr --add hx "helix"
 abbr --add fzf "fzf --preview 'bat -A --color=auto {}'"
+abbr --add hl "rg --passthru"
+abbr --add pm "sudo pacman"
+abbr --add yay "yay --color=always"
 
 # fish_config theme choose enfocado
 
@@ -108,6 +95,7 @@ abbr --add fzf "fzf --preview 'bat -A --color=auto {}'"
 # This section can be safely removed at any time if needed.
 test -r '/home/anon/.opam/opam-init/init.fish' && source '/home/anon/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
 # END opam configuration
+
 fish_config theme choose enfocado
 
 set -xg GPG_TTY $(tty)
