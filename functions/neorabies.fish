@@ -18,7 +18,7 @@ function neorabies
   clear
 
   set_color normal
-  kitty +kitten icat --align left --use-window-size 10,10,200,200 --place 200x200@3x1 /home/anon/Pictures/icons/arch-girl-blonde.png
+  kitty +kitten icat --align left --use-window-size 10,10,200,200 --place 200x200@3x1 ~/.config/fish/src/arch-girl-blonde.png
 
   echo -ens "              "
   set_color "#ededed" --bold
