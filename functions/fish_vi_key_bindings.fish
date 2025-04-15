@@ -68,8 +68,8 @@ function fish_vi_key_bindings --description 'vi-like key bindings for fish'
     bind -s --preset -M default h backward-char
     bind -s --preset -M default l forward-char
     bind -s --preset -m insert enter execute
-    bind -s --preset -m insert ctrl-j execute
-    bind -s --preset -m insert ctrl-m execute
+    # bind -s --preset -m insert ctrl-j execute
+    # bind -s --preset -m insert ctrl-m execute
     bind -s --preset -m insert o 'set fish_cursor_end_mode exclusive' insert-line-under repaint-mode
     bind -s --preset -m insert O 'set fish_cursor_end_mode exclusive' insert-line-over repaint-mode
     bind -s --preset -m insert i repaint-mode
@@ -89,6 +89,7 @@ function fish_vi_key_bindings --description 'vi-like key bindings for fish'
     end
 
     bind -s --preset u undo
+    bind -s --preset U redo
     bind -s --preset ctrl-r redo
 
     bind -s --preset [ history-token-search-backward
@@ -107,6 +108,7 @@ function fish_vi_key_bindings --description 'vi-like key bindings for fish'
     bind -s --preset E 'set fish_cursor_end_mode exclusive' forward-single-char forward-bigword backward-char 'set fish_cursor_end_mode inclusive'
 
     bind -s --preset -M insert ctrl-n accept-autosuggestion
+    # bind -s --preset -M insert enter accept-autosuggestion
 
     # Vi/Vim doesn't support these keys in insert mode but that seems silly so we do so anyway.
     bind -s --preset -M insert -k home beginning-of-line

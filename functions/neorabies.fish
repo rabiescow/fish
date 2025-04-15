@@ -6,7 +6,7 @@ function neorabies
   set -l host (cat /etc/hostname)
   set -l kernel (uname -sr)
   set -l shell ($SHELL --version)
-  set -l term ghostty
+  set -l term $TERM
   set -l cpu (cat /proc/cpuinfo | grep "model name" | head -n1 | sed 's/model name\s*:\s\(.*\)/\1/')
   set -l gpu (inxi -G | grep renderer | sed 's/\s*renderer:\s\(.*\)\s(.*/\1/')
 
@@ -31,7 +31,7 @@ function neorabies
 
   echo -ens "                 "
   set_color green
-  echo "━━━━━━━━━━━━━━━━━━━━"
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
   set_color normal
 
   echo -ens "                 "

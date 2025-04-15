@@ -1,0 +1,1 @@
+../fish_greeter/functions/__greeter_component_os.fish

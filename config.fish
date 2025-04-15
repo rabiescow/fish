@@ -4,7 +4,6 @@
 set -xg HOME /home/anon
 set -xg fish_greeting ""
 set -xg BUN_INSTALL $HOME/.bun
-set -xg TERM xterm-ghostty
 
 # Wine
 set -xg WINEPREFIX $HOME/.wine
@@ -19,7 +18,6 @@ set -xg GOPATH $HOME/.local/lib/go
 set -xg GOENV $HOME/.local/lib/go/env
 
 # Environment set -xgs
-set -xg TERM st-256color
 set -xg VISUAL nvim
 
 # XDG set -xgs
