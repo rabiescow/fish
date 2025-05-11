@@ -6,10 +6,10 @@ set -xg fish_greeting ""
 set -xg BUN_INSTALL $HOME/.bun
 
 # Wine
-set -xg WINEPREFIX $HOME/.wine
-set -xg WINEARCH win32
-set -xg WINEDLLOVERRIDES "d3d9,d3d11,d3d10core,dxgi=b"
-set -xg MANGOHUD 0
+# set -xg WINEPREFIX $HOME/.wine
+# set -xg WINEARCH win32
+# set -xg WINEDLLOVERRIDES "d3d9,d3d11,d3d10core,dxgi=b"
+# set -xg MANGOHUD 0
 
 # Programming languages
 set -xg PROG_LANG $HOME/.lang
@@ -27,6 +27,9 @@ set -xg XDG_DATA_HOME $HOME/.local/share
 set -xg XDG_STATE_HOME ~/.local/state
 set -xg XDG_CACHE_HOME ~/.cache
 
+# Vi mode enabled
+set fish_key_bindings fish_vi_key_bindings
+
 # FZF set -xgs
 # Preview
 set -xg FZF_DEFAULT_OPTS '
@@ -43,7 +46,7 @@ set -xg FZF_DEFAULT_OPTS '
 set -xg FZF_CTRL_T_OPTS "
   --walker-skip .git,node_modules,target
   --preview 'bat -n --color always {}'
-  --bind 'ctrl-/:change-preview-window(down|hidden|)'" 
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
 # CTRL-Y to copy the command into clipboard using pbcopy
 set -xg FZF_CTRL_R_OPTS "
@@ -74,26 +77,19 @@ set -xg HYPRSHOT_DIR "$HOME/Pictures/screenshots"
 
 zoxide init fish | source
 
-abbr --add ff "fastfetch -c /home/anon/.config/fastfetch/hypr.jsonc"
-abbr --add ff1 "fastfetch -c /home/anon/.config/fastfetch/examples/8.jsonc"
-abbr --add gh "history|rg"
-abbr --add hx "helix"
-abbr --add fzf "fzf --preview 'bat -A --color=auto {}'"
-abbr --add hl "rg --passthru"
-abbr --add pm "sudo pacman"
-abbr --add yay "yay --color=always"
+# abbr --add ff "fastfetch -c /home/anon/.config/fastfetch/hypr.jsonc"
+# abbr --add ff1 "fastfetch -c /home/anon/.config/fastfetch/examples/8.jsonc"
+# abbr --add gh "history|rg"
+# abbr --add hx helix
+# abbr --add fzf "fzf --preview 'bat -A --color=auto {}'"
+# abbr --add hl "rg --passthru"
+# abbr --add pm "sudo pacman"
+# abbr --add yay "yay --color=always"
 
 # fish_config theme choose enfocado
 
+test -r '/home/anon/.opam/opam-init/init.fish' && source '/home/anon/.opam/opam-init/init.fish' >/dev/null 2>/dev/null; or true
 
-# BEGIN opam configuration
-# This is useful if you're using opam as it adds:
-#   - the correct directories to the PATH
-#   - auto-completion for the opam binary
-# This section can be safely removed at any time if needed.
-test -r '/home/anon/.opam/opam-init/init.fish' && source '/home/anon/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
-# END opam configuration
-
-fish_config theme choose enfocado
+# fish_config theme choose enfocado
 
 set -xg GPG_TTY $(tty)

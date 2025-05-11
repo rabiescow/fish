@@ -1,19 +1,9 @@
 function fish_right_prompt
+    __vertical_util_set vertical_order_right vi_mode git_branch git_status \
+        duration time
 
-	# ------------------------------------------------------------------------------
-	# Configuration
-	# ------------------------------------------------------------------------------
-
-	__sf_util_set_default SPACEFISH_RPROMPT_ORDER ""
-
-	# ------------------------------------------------------------------------------
-	# Sections
-	# ------------------------------------------------------------------------------
-
-	[ -n "$SPACEFISH_RPROMPT_ORDER" ]; or return
-
-	for i in $SPACEFISH_RPROMPT_ORDER
-		eval __sf_section_$i
-	end
-	set_color normal
+    for component in $vertical_order_right
+        eval __vertical_component_$component
+    end
+    set_color normal
 end

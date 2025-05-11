@@ -3,12 +3,12 @@ function fish_print_hg_root
     if not command -sq hg
         return 1
     end
-
     # Find an hg directory above $PWD
     # without calling `hg root` because that's too slow
     set -l root
     set -l dir (pwd -P 2>/dev/null)
     or return 1
+  echo "dir>>" $dir
 
     while test $dir != /
         if test -f $dir'/.hg/dirstate'
@@ -18,6 +18,5 @@ function fish_print_hg_root
         # Go up one directory
         set dir (string replace -r '[^/]*/?$' '' $dir)
     end
-
     return 1
 end
