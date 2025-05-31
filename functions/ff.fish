@@ -1,17 +1,4 @@
-function ff --description "run fzf smarter"
-    set -l options h/help c
-    argparse -n dirs --max-args=1 $options -- $argv
-    or return
-
-    if set -q _flag_help
-        __fish_print_help ff
-        return 0
-    end
-
-    if set -q _flag_c
-        set -e -g path
-        return 0
-    end
-
-    fzf --preview="bat --theme Coldark-Dark --color always {}" $argv[1]
+function ff --description "runs fzf with bat preview mode"
+    set -l FZF_DEFAULT_OPTS "--color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8,fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC,marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8,selected-bg:#45475A,border:#313244,label:#CDD6F4"
+    fzf $FZF_DEFAULT_OPTS --preview="bat --color always --theme 'Catppuccin Mocha' --style numbers {}"
 end

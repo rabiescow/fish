@@ -1,9 +1,8 @@
-# if status is-interactive
-#     # Commands to run in interactive sessions can go here
-# end
+#
+# RABIES COW SHELL CONFIG
+#
 set -xg HOME /home/anon
 set -xg fish_greeting ""
-set -xg BUN_INSTALL $HOME/.bun
 
 # Wine
 # set -xg WINEPREFIX $HOME/.wine
@@ -16,6 +15,8 @@ set -xg PROG_LANG $HOME/.lang
 set -xg ELIXIR_ERL_OPTIONS "+fnu"
 set -xg GOPATH $HOME/.local/lib/go
 set -xg GOENV $HOME/.local/lib/go/env
+# Ocaml
+test -r '/home/anon/.opam/opam-init/init.fish' && source '/home/anon/.opam/opam-init/init.fish' >/dev/null 2>/dev/null; or true
 
 # Environment set -xgs
 set -xg VISUAL nvim
@@ -30,42 +31,13 @@ set -xg XDG_CACHE_HOME ~/.cache
 # Vi mode enabled
 set fish_key_bindings fish_vi_key_bindings
 
-# FZF set -xgs
-# Preview
-set -xg FZF_DEFAULT_OPTS '
-  --preview "
-  if file --mime-type {} | grep -qF image/; then
-    imgcat --depth iterm2 --width $FZF_PREVIEW_COLUMNS --height $FZF_PREVIEW_LINES {}
-  else
-    bat --theme TwoDark --style numbers --color always --line-range :500 {}
-  fi
-  "
-'
-
-# Preview file content using bat (https://github.com/sharkdp/bat)
-set -xg FZF_CTRL_T_OPTS "
-  --walker-skip .git,node_modules,target
-  --preview 'bat -n --color always {}'
-  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
-
-# CTRL-Y to copy the command into clipboard using pbcopy
-set -xg FZF_CTRL_R_OPTS "
-  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
-  --color header:italic
-  --header 'Press CTRL-Y to copy command into clipboard'"
-
-# Print tree structure in the preview window
-set -xg FZF_ALT_C_OPTS "
-  --walker-skip .git,node_modules,target
-  --preview 'tree -C {}'"
-
 # Fontpreview settings
 set -xg FONTPREVIEW_SEARCH_PROMPT "❯ "
-set -xg FONTPREVIEW_SIZE 1800x800
+set -xg FONTPREVIEW_SIZE 1300x800
 set -xg FONTPREVIEW_POSITION "+120+120"
 set -xg FONTPREVIEW_FONT_SIZE 48
-set -xg FONTPREVIEW_BG_COLOR "#27445D"
-set -xg FONTPREVIEW_FG_COLOR "#EFE9D5"
+set -xg FONTPREVIEW_BG_COLOR "#1e1e2e"
+set -xg FONTPREVIEW_FG_COLOR "#cdcddd"
 set -xg FONTPREVIEW_PREVIEW_TEXT 'No one shall be held in slavery or servitude;\nslavery and the slave trade shall\nbe prohibited in all their forms.\n\nfunc main() {\n fmt.Println("Hello World!")\n}'
 
 # BAT config file
@@ -75,21 +47,10 @@ set -xg BAT_CONFIG_DIR "~/.config/bat/"
 # Hyprshot save location
 set -xg HYPRSHOT_DIR "$HOME/Pictures/screenshots"
 
+# zoxide init
 zoxide init fish | source
 
-# abbr --add ff "fastfetch -c /home/anon/.config/fastfetch/hypr.jsonc"
-# abbr --add ff1 "fastfetch -c /home/anon/.config/fastfetch/examples/8.jsonc"
-# abbr --add gh "history|rg"
-# abbr --add hx helix
-# abbr --add fzf "fzf --preview 'bat -A --color=auto {}'"
-# abbr --add hl "rg --passthru"
-# abbr --add pm "sudo pacman"
-# abbr --add yay "yay --color=always"
-
-# fish_config theme choose enfocado
-
-test -r '/home/anon/.opam/opam-init/init.fish' && source '/home/anon/.opam/opam-init/init.fish' >/dev/null 2>/dev/null; or true
-
-# fish_config theme choose enfocado
-
 set -xg GPG_TTY $(tty)
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
