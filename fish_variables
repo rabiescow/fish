@@ -109,7 +109,7 @@ SETUVAR greeter_kernel_space:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
 SETUVAR greeter_kernel_text:Kernel
 SETUVAR greeter_kernel_text_color:blue\x1e\x2d\x2dbold
 SETUVAR greeter_kernel_text_suffix:\x20\x20
-SETUVAR greeter_kernel_value:Linux\x206\x2e14\x2e7\x2darch2\x2d1
+SETUVAR greeter_kernel_value:Linux\x206\x2e14\x2e10\x2darch1\x2d1
 SETUVAR greeter_kernel_value_color:\x23878787
 SETUVAR greeter_kitty_available:true
 SETUVAR greeter_line:\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
@@ -125,7 +125,7 @@ SETUVAR greeter_memory_space:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
 SETUVAR greeter_memory_text:Memory
 SETUVAR greeter_memory_text_color:blue\x1e\x2d\x2dbold
 SETUVAR greeter_memory_text_suffix:\x20\x20
-SETUVAR greeter_memory_value:44\x2e79GiB\x20/\x20131\x2e82GiB\x20\x2833\x2e97\x20\x25\x29
+SETUVAR greeter_memory_value:18\x2e67GiB\x20/\x20131\x2e82GiB\x20\x2814\x2e16\x20\x25\x29
 SETUVAR greeter_memory_value_color:\x23878787
 SETUVAR greeter_newline:true
 SETUVAR greeter_order:logo\x1etitle\x1eline\x1eos\x1ehost\x1ekernel\x1euptime\x1etermshell\x1ecpu\x1ecpumode\x1egpu\x1ememory
@@ -166,7 +166,7 @@ SETUVAR greeter_uptime_space:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
 SETUVAR greeter_uptime_text:Uptime
 SETUVAR greeter_uptime_text_color:blue\x1e\x2d\x2dbold
 SETUVAR greeter_uptime_text_suffix:\x20\x20
-SETUVAR greeter_uptime_value:22\x3a32\x20\x28h\x3am\x29
+SETUVAR greeter_uptime_value:4\x3a34\x20\x28h\x3am\x29
 SETUVAR greeter_uptime_value_color:\x23878787
 SETUVAR verical_host_ssh_only:FALSE
 SETUVAR vertical_cue:\x20

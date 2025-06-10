@@ -3,6 +3,7 @@
 #
 set -xg HOME /home/anon
 set -xg fish_greeting ""
+set -xg GEMINI_API_KEY AIzaSyAGvsbmSyaYPbR395-oAx-JG35VkClHgPA
 
 # Wine
 # set -xg WINEPREFIX $HOME/.wine
