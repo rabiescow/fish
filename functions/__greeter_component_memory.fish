@@ -1,1 +1,0 @@
-../fish_greeter/functions/__greeter_component_memory.fish

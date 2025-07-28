@@ -1,1 +1,0 @@
-../fish_greeter/functions/greeter_clear_config.fish

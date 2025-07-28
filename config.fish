@@ -4,6 +4,9 @@
 set -xg HOME /home/anon
 set -xg fish_greeting ""
 set -xg GEMINI_API_KEY AIzaSyAGvsbmSyaYPbR395-oAx-JG35VkClHgPA
+set -xg GTK_IM_MODULE ibus
+set -xg QT_IM_MODULE ibus
+set -xg XMODIFIERS @im=ibus
 
 # Wine
 # set -xg WINEPREFIX $HOME/.wine
@@ -18,6 +21,8 @@ set -xg GOPATH $HOME/.local/lib/go
 set -xg GOENV $HOME/.local/lib/go/env
 # Ocaml
 test -r '/home/anon/.opam/opam-init/init.fish' && source '/home/anon/.opam/opam-init/init.fish' >/dev/null 2>/dev/null; or true
+# Ruby
+source (rbenv init - | psub)
 
 # Environment set -xgs
 set -xg VISUAL nvim

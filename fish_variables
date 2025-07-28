@@ -60,7 +60,7 @@ SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
 SETUVAR fish_user_path:/usr/bin/zig\x1e/usr/lib/go/bin
-SETUVAR fish_user_paths:/home/anon/\x2eopam/default/bin\x1e/home/anon/\x2ebun/bin
+SETUVAR fish_user_paths:/home/anon/\x2elocal/share/qlot/bin\x1e/usr/lib/jvm/java\x2d22\x2dgraalvm/bin\x1e/usr/lib/jvm/java\x2d21\x2dgraalvm/bin\x1e/home/anon/\x2eapps/elvis/_build/default/bin\x1e/home/anon/\x2elocal/lib/go/bin\x1e/home/anon/\x2eopam/default/bin\x1e/home/anon/\x2ebun/bin
 SETUVAR greeter_cpu_icon:\x20\U000f0ee0\x20\x20
 SETUVAR greeter_cpu_icon_color:\x23878787
 SETUVAR greeter_cpu_separator:\x20\u279c\x20\x20
@@ -69,7 +69,7 @@ SETUVAR greeter_cpu_space:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
 SETUVAR greeter_cpu_text:CPU
 SETUVAR greeter_cpu_text_color:blue\x1e\x2d\x2dbold
 SETUVAR greeter_cpu_text_suffix:\x20\x20\x20\x20\x20
-SETUVAR greeter_cpu_value:AMD\x20Ryzen\x209\x205900X\x2012\x2dCore\x20Processor
+SETUVAR greeter_cpu_value:AMD\x20Ryzen\x209\x207900X\x2012\x2dCore\x20Processor
 SETUVAR greeter_cpu_value_color:\x23878787
 SETUVAR greeter_cpumode_icon:\x20\U000f04c5\x20\x20
 SETUVAR greeter_cpumode_icon_color:\x23878787
@@ -89,7 +89,7 @@ SETUVAR greeter_gpu_space:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
 SETUVAR greeter_gpu_text:GPU
 SETUVAR greeter_gpu_text_color:blue\x1e\x2d\x2dbold
 SETUVAR greeter_gpu_text_suffix:\x20\x20\x20\x20\x20
-SETUVAR greeter_gpu_value:AMD/ATI\x20Radeon\x20RX\x20XT/7600S/7700S
+SETUVAR greeter_gpu_value:AMD/ATI\x207c\x3a00\x2e0\x20VGA\x20compatible\x20controller\x20\x5b0300\x5d\x3a\x20Advanced\x20Micro\x20Devices\x2c\x20Inc\x2e\x20\x5bAMD/ATI\x5d\x20Raphael\x20\x5b1002\x3a164e\x5d\x20\x28rev\x20c2\x29\x20Radeon\x20RX\x20XT/7600S/7700S
 SETUVAR greeter_gpu_value_color:\x23878787
 SETUVAR greeter_host_icon:\x20\U000f0826\x20\x20
 SETUVAR greeter_host_icon_color:\x23878787
@@ -109,7 +109,7 @@ SETUVAR greeter_kernel_space:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
 SETUVAR greeter_kernel_text:Kernel
 SETUVAR greeter_kernel_text_color:blue\x1e\x2d\x2dbold
 SETUVAR greeter_kernel_text_suffix:\x20\x20
-SETUVAR greeter_kernel_value:Linux\x206\x2e14\x2e10\x2darch1\x2d1
+SETUVAR greeter_kernel_value:Linux\x206\x2e15\x2e5\x2darch1\x2d1
 SETUVAR greeter_kernel_value_color:\x23878787
 SETUVAR greeter_kitty_available:true
 SETUVAR greeter_line:\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
@@ -125,7 +125,7 @@ SETUVAR greeter_memory_space:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
 SETUVAR greeter_memory_text:Memory
 SETUVAR greeter_memory_text_color:blue\x1e\x2d\x2dbold
 SETUVAR greeter_memory_text_suffix:\x20\x20
-SETUVAR greeter_memory_value:18\x2e67GiB\x20/\x20131\x2e82GiB\x20\x2814\x2e16\x20\x25\x29
+SETUVAR greeter_memory_value:27\x2e69GiB\x20/\x2064\x2e91GiB\x20\x2842\x2e65\x20\x25\x29
 SETUVAR greeter_memory_value_color:\x23878787
 SETUVAR greeter_newline:true
 SETUVAR greeter_order:logo\x1etitle\x1eline\x1eos\x1ehost\x1ekernel\x1euptime\x1etermshell\x1ecpu\x1ecpumode\x1egpu\x1ememory
@@ -149,7 +149,7 @@ SETUVAR greeter_terminal_space:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
 SETUVAR greeter_terminal_text:Terminal
 SETUVAR greeter_terminal_text_color:blue\x1e\x2d\x2dbold
 SETUVAR greeter_terminal_text_suffix:
-SETUVAR greeter_terminal_value:xterm\x2dghostty
+SETUVAR greeter_terminal_value:xterm\x2dkitty
 SETUVAR greeter_terminal_value_color:\x23878787
 SETUVAR greeter_title_host:cassiopeia
 SETUVAR greeter_title_host_color:\x23878787
@@ -166,7 +166,7 @@ SETUVAR greeter_uptime_space:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
 SETUVAR greeter_uptime_text:Uptime
 SETUVAR greeter_uptime_text_color:blue\x1e\x2d\x2dbold
 SETUVAR greeter_uptime_text_suffix:\x20\x20
-SETUVAR greeter_uptime_value:4\x3a34\x20\x28h\x3am\x29
+SETUVAR greeter_uptime_value:8\x3a31\x20\x28h\x3am\x29
 SETUVAR greeter_uptime_value_color:\x23878787
 SETUVAR verical_host_ssh_only:FALSE
 SETUVAR vertical_cue:\x20
